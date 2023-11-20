@@ -4,25 +4,24 @@ Console.WriteLine("To the maze of death");
 Thread.Sleep(1000);
 System.Console.WriteLine("Enter the name to write on your tomb");
 
-
+string name = Console.ReadLine();
 while (true)
 {
-    string name = "";
     if (name != "")
     {
         break;
     }
     else if (name == "")
     {
-        System.Console.WriteLine("Invaild input");
+        System.Console.WriteLine("Please state your name");
     }
 }
 
+Thread.Sleep(1000);
+System.Console.WriteLine($"Well then {name}, I hope you're ready to face your fears.");
+Thread.Sleep(1000);
 
 
-
-
-string player = Console.ReadLine();
 
 // Random generator = new Random();
 // int rounds = generator.Next(3,6);
