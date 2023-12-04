@@ -1,4 +1,7 @@
-﻿Console.WriteLine("Welcome, challenger");
+﻿using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+
+Console.WriteLine("Welcome, challenger");
 Thread.Sleep(1000);
 Console.WriteLine("To the maze of death");
 Thread.Sleep(1000);
@@ -18,20 +21,22 @@ while (true)
     }
 }
 
-Thread.Sleep(1000);
-System.Console.WriteLine($"Well then {name}, I hope you're ready to face your fears.");
+Thread.Sleep(1500);
+System.Console.WriteLine($"Well then {name}, I hope you're ready to face your fears.\n");
 Thread.Sleep(1000);
 
 
 
 Random generator = new Random();
 // int rounds = generator.Next(3,6);
-// List<string> enemies = new List<string>();
+List<string> enemies = new List<string>();
+enemies.Add("Slime");
+enemies.Add("Goblin");
+enemies.Add("Orc");
 
-// int x = 20;
-// int y = 35;
-// int z = 50;
-// List<int> myList = new List<int>() {x,y,z};
+// Console.WriteLine(enemies[2]);
+
+
 // int index = generator.Next(myList.Count);
 // System.Console.WriteLine(myList[index]);
 
@@ -40,11 +45,34 @@ string a = Console.ReadLine().ToLower();
 
 if (a == "right" || a == "r")
 {
-    Console.WriteLine("You continue walking to the right when you suddenly sight a silhouette. Do you approach?");
+    Console.WriteLine("You continue walking to the right when you suddenly sight a silhouette lurking in the shadows. Do you approach?");
     a = Console.ReadLine().ToLower();
     if (a == "yes" || a == "y")
     {
-        
+        int q = generator.Next(enemies.Count);
+        string enemy = enemies[q];
+        Console.WriteLine($"You walk towards the silhouette and you encounter a {enemy}.\n As you have no way to escape you fight the {enemy}");
+        // method for fighting
+    }
+    else
+    {
+        Console.WriteLine("You decide to not approach the silhouette and contine on your way walking past the mysteries in the shadows.");
+    }
+}
+
+if (a == "left" || a == "l")
+{
+    Console.WriteLine("You take the path to the left and you end up walking in circles.");
+    Thread.Sleep(1000);
+    Console.WriteLine("After walking for what seems like an eternity you stumble upon an abandoned house emerged in the walls of the maze.");
+    Thread.Sleep(1000);
+    System.Console.WriteLine("Do you wish to enter the house?");
+    
+    a = Console.ReadLine().ToLower();
+    if (a == "yes" || a == "y")
+    {
+        System.Console.WriteLine("After a moment of staring at the house like an idiot, you think to yourself \"Why not take a look in the house\".");
+        System.Console.WriteLine("");
     }
 }
 
@@ -54,5 +82,17 @@ if (a == "right" || a == "r")
 
 
 
-
 Console.ReadLine();
+
+
+// (int hp,string name)  enemy = (100, "simdisd");
+
+// enemy.hp;
+
+
+Direction();
+
+void Direction()
+{
+    System.Console.WriteLine();
+}
