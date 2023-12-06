@@ -51,7 +51,7 @@ if (a == "right" || a == "r")
     {
         int q = generator.Next(enemies.Count);
         string enemy = enemies[q];
-        Console.WriteLine($"You walk towards the silhouette and you encounter a {enemy}.\n As you have no way to escape you fight the {enemy}");
+        Console.WriteLine($"\nYou walk towards the silhouette and you encounter a {enemy}.\n As you have no way to escape you fight the {enemy}");
         // method for fighting
     }
     else
@@ -62,7 +62,7 @@ if (a == "right" || a == "r")
 
 if (a == "left" || a == "l")
 {
-    Console.WriteLine("You take the path to the left and you end up walking in circles.");
+    Console.WriteLine("\nYou take the path to the left and you end up walking in circles.");
     Thread.Sleep(1000);
     Console.WriteLine("After walking for what seems like an eternity you stumble upon an abandoned house emerged in the walls of the maze.");
     Thread.Sleep(1000);
@@ -71,8 +71,24 @@ if (a == "left" || a == "l")
     a = Console.ReadLine().ToLower();
     if (a == "yes" || a == "y")
     {
-        System.Console.WriteLine("After a moment of staring at the house like an idiot, you think to yourself \"Why not take a look in the house\".");
-        System.Console.WriteLine("");
+        System.Console.WriteLine("\nAfter a moment of staring at the house like an idiot, you think to yourself \"Why not take a look in the house\".");
+        Thread.Sleep(1000);
+        System.Console.WriteLine("You walk towards the house tipping on your toes.");
+        Thread.Sleep(1000);
+        System.Console.WriteLine("When you get to the seemingly rotten wooden door you realize that it's unusually sturdy");
+        Thread.Sleep(1000);
+        System.Console.WriteLine("You try to open the door but soon enough you realize that it's locked");
+        Thread.Sleep(1000);
+        System.Console.WriteLine("In the same moment you thing to yourself \"Maybe I should just look for another way to enter the house\"");
+        System.Console.WriteLine("Do you wish to find another way?");
+
+        a = Console.ReadLine().ToLower();
+        if (a == "yes" || a == "y")
+        {
+            System.Console.WriteLine("As the door doesn't move an inch, you decide to take a look around the house looking for an other way to enter.");
+            Thread.Sleep(1000);
+            System.Console.WriteLine("You take a walk");
+        }
     }
 }
 
