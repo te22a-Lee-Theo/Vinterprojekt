@@ -87,7 +87,15 @@ if (a == "left" || a == "l")
         {
             System.Console.WriteLine("As the door doesn't move an inch, you decide to take a look around the house looking for an other way to enter.");
             Thread.Sleep(1000);
-            System.Console.WriteLine("You take a walk");
+            System.Console.WriteLine("You take a walk around the house and find an open window");
+            Thread.Sleep(1000);
+            System.Console.WriteLine("You use the pipe on the wall to climb up to the window and enter.");
+        }
+        else if (a == "no" || a == "n")
+        {
+            System.Console.WriteLine("You make one final effort and try to kick the door open, but it still doesn't budge");
+            Thread.Sleep(1000);
+            System.Console.WriteLine("With that final kick a key falls from a gap above the door");
         }
     }
 }
