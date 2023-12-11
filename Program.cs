@@ -95,8 +95,16 @@ if (a == "left" || a == "l")
         {
             System.Console.WriteLine("You make one final effort and try to kick the door open, but it still doesn't budge");
             Thread.Sleep(1000);
-            System.Console.WriteLine("With that final kick a key falls from a gap above the door");
+            System.Console.WriteLine("With that final kick a key falls from a gap above the door and you use it to open the door.");
+            Thread.Sleep(1000);
         }
+        System.Console.WriteLine("You have now finally entered the mysterious house");
+        Thread.Sleep(1000);
+        System.Console.WriteLine("While in the house you decide to take a look around to see what you can find");
+        Thread.Sleep(1000);
+        System.Console.WriteLine("While exploring you find nothing out of the ordinary exept a rusty door to the basement.");
+        Thread.Sleep(1000);
+        System.Console.WriteLine("As you have no");
     }
 }
 
