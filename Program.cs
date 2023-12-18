@@ -1,6 +1,8 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
+string a = "";
+
 Console.WriteLine("Welcome, challenger");
 Thread.Sleep(1000);
 Console.WriteLine("To the maze of death");
@@ -41,12 +43,14 @@ enemies.Add("Orc");
 // System.Console.WriteLine(myList[index]);
 
 Console.WriteLine("You enter the maze and approach a fork in the road. Which way do you choose? Left or Right");
-string a = Console.ReadLine().ToLower();
+string b = Console.ReadLine().ToLower();
+// dir();
 
-if (a == "right" || a == "r")
+if (b == "right" || b == "r")
 {
     Console.WriteLine("You continue walking to the right when you suddenly sight a silhouette lurking in the shadows. Do you approach?");
-    a = Console.ReadLine().ToLower();
+    // a = Console.ReadLine().ToLower();
+    choise1();
     if (a == "yes" || a == "y")
     {
         int q = generator.Next(enemies.Count);
@@ -60,7 +64,7 @@ if (a == "right" || a == "r")
     }
 }
 
-if (a == "left" || a == "l")
+if (b == "left" || b == "l")
 {
     Console.WriteLine("\nYou take the path to the left and you end up walking in circles.");
     Thread.Sleep(1000);
@@ -104,7 +108,7 @@ if (a == "left" || a == "l")
         Thread.Sleep(1000);
         System.Console.WriteLine("While exploring you find nothing out of the ordinary exept a rusty door to the basement.");
         Thread.Sleep(1000);
-        System.Console.WriteLine("As you have no");
+        System.Console.WriteLine("You decide to open the door and see what lies inside");
     }
 }
 
@@ -122,9 +126,26 @@ Console.ReadLine();
 // enemy.hp;
 
 
-Direction();
+// choise1();
 
-void Direction()
+static void choise1()
 {
-    System.Console.WriteLine();
+string a = Console.ReadLine().ToLower();
+while (true)
+{
+	if (a == "yes" || a == "y")
+	{
+		// break;
+        return;
+	}
+	else if (a == "no" || a == "n")
+	{
+		break;
+	}
+	else
+	{
+		Console.WriteLine("Don't think you can escape by not choosing a path");
+		a = Console.ReadLine().ToLower();
+	}
+}
 }
